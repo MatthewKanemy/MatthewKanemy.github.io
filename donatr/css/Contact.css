@@ -1,0 +1,65 @@
+
+body{
+    margin: 0;
+    padding: 10;
+    font-family: sans-serif;
+    overflow: scroll;
+    background-color: #00b4d8;
+}
+.contactform{
+    width: 80%;
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 22px black;
+    font-family: "Montserrat", sans-serif;
+}
+.contactform h1{
+    margin-top: 20;
+    font-weight: 200;
+    color: #00b4d8;
+    font-family: sans-serif;
+}
+
+.text label{
+    display: block;
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.text {
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+
+}
+.text input, .text textarea{
+    width: 100%;
+    border: black;
+    background: none;
+    font-size: 18px;
+    margin-top: 6px;
+}
+.button { 
+    display: block;
+    background: lightblue;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    size: 450px;
+
+}

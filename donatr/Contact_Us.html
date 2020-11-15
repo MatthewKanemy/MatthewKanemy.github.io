@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- BootStrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>World Peace Website</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b6b67aaf01.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/Contact.css">
+</head>
+<body>
+  <header>
+
+    <div class="navBar">
+			
+			<img src="/images/logo.png">
+
+			<!--  Navbar menu when browser is bigger -->
+			<li class="nav">
+				<a href="index.html">Home</a>
+				<a href="About_Us.html">About Us</a>
+        <a href="Current_Issue.html">Current Issues</a>
+      </li>
+
+			<!-- Dropdown menu for smaller browsers -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-secondary dropdown-toggle main-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Contact Us
+			  </button>
+			  <div class="dropdown-menu dropdown-menu-right">
+          <button onclick="window.location.href='index.html'" class="dropdown-item" type="button">Home</button>
+			    <button onclick="window.location.href='about_us.html'" class="dropdown-item" type="button">About Us</button>
+			    <button onclick="window.location.href='current_issue.html'" class="dropdown-item" type="button">Current Issues</button>
+			  </div>
+			</div>
+    </div>
+    <main>
+<!--Endpoint for form submission data-->
+      <form 
+      action="https://formspree.io/mvowdzvb"
+      method="POST"
+      >
+        <div class="contactform">
+            <h1 id="Contact"><b>Contact Us<b></h1>
+            <div class="text">
+                <label>Full Name: </label>
+                <input type="text" name="Name" value="" placeholder="Enter Your Name" required>
+            </div>
+            <div class="text">
+                <label>Email: </label>
+                <input type="email" name="Email" value="" placeholder="Enter Your Email" required>
+            </div>
+            <div class="text">
+                <label>Phone Number: </label>
+                <input type="number" name="Phone-Number" value="" placeholder="Enter Your Phone Number" required>
+            </div>
+            <div class="text">
+                <label>Message: </label>
+                  <textarea type="message" name="Message" value="" required></textarea>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </div>
+        </form>
+
+    </main>
+  </header>
+  <section>
+      
+    <!-- BootStrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
