@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <title>Contact Me</title>
+    </head>
+    <body class="titleBack">
+
+        <!-- Send the Email -->
+        <script>
+
+          var sender;
+          var title;
+          var text;
+
+          //set the values to what to put in email
+          function vars() {
+
+            sender = document.getElementById("email").value;
+            title = document.getElementById("name").value;
+            text = document.getElementById("text").value;
+
+          }
+
+          //send the email to me with their data from an email account i created
+          function sendEmail() {
+
+          	Email.send({
+            	SecureToken : "6734d97a-227c-43f1-898b-9586ef3834ec",
+            	To : 'matthewkanemy@gmail.com',
+            	From : "matthewkanemy@gmail.com",
+            	Subject : "Name: " + title + " Email: " + sender,
+            	Body : "Message: " + text,
+          	}).then(
+          		message => alert("email successfully sent")
+          	);
+          }
+
+        </script>
+
+        <!--Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="#">Matthew Kanemy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--/.Navbar -->
+
+        <!-- Link to my github and LinkedIn -->
+        <div class="card cardm cardBack">
+          <div class="card-body">
+            <h4 class="card-title">Connect with me!</h4>
+            <p class="card-text">Below is my github and my linkedin!</p>
+            <a href="https://github.com/MatthewKanemy" class="card-link">Github</a>
+            <a href="https://www.linkedin.com/in/matthew-kanemy-a88912186/" class="card-link">LinkedIn</a>
+            <a href="https://devpost.com/MatthewKanemy?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="card-link">Devpost</a>
+          </div>
+        </div>
+
+        <!-- Form to send me an email -->
+
+            <form class="myForm" method="post" id="myForm">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" id="email" name="email" class="form-control" id="validationServer01 email" aria-describedby="emailHelp" placeholder="Enter email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" id="name" name="name" class="form-control" id="formGroupExampleInput name" placeholder="Full Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="text" name="body" id="exampleFormControlTextarea1 text" rows="3" placeholder="Message" required></textarea>
+              </div>
+
+              <input type="button" class="btn btn-primary" value="Send Email" onclick="vars(); sendEmail();"/>
+            </form>
+
+        <!-- Bootstrap js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

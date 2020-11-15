@@ -1,0 +1,203 @@
+@media (max-width: 767px) {
+
+    .navbar-brand {
+
+        padding-right: 60vw;
+
+    }
+
+}
+
+@media (max-width: 610px) {
+
+    .navbar-brand {
+
+        padding-right: 50vw;
+
+    }
+
+}
+
+@media (max-width: 512px) {
+
+    .navbar-brand {
+
+        padding-right: 40vw;
+
+    }
+
+}
+
+@media (max-width: 414px) {
+
+    .navbar-brand {
+
+        padding-right: 30vw;
+
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .navbar-brand {
+
+        padding-right: 20vw;
+
+    }
+
+}
+
+@media (max-width: 305px) {
+
+    .navbar-brand {
+
+        padding-right: 0vw;
+
+    }
+
+}
+
+body {
+
+    width: 100%;
+
+}
+
+.titleBack {
+
+    background-color: white;
+	text-align: center;
+
+	background-image: url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.typewrite {
+
+    color: white;
+
+}
+
+.type {
+
+    padding-top: 35vh;
+
+}
+
+@media (max-width: 400px) {
+
+    .type {
+
+    padding-top: 30vh;
+
+    }
+
+}
+
+.write {
+
+    border-right: 0.08em solid white;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+    animation-name: typewrite;
+    animation-duration: 7.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes typewrite {
+
+    1% {opacity: 1;}
+    75% {opacity: 1;}
+    100% {opacity: 0;
+          position: absolute;
+          visibility: hidden;}
+
+}
+
+.write:hover {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.card-group {
+
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 1em;
+
+}
+
+.cardBack {
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+
+.cardBack a {
+
+    color: turquoise;
+
+}
+
+.myForm {
+
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3%;
+
+}
+
+.exp {
+
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.portfolio:hover {
+
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.acrd {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.acrd:hover {
+
+    text-decoration: none;
+    color: black;
+    border: 3px solid white;
+
+}
+
+.cardm {
+
+    margin: 1em;
+
+}
+
+
+
+
+
+

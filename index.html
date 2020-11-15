@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Matthew Kanemy</title>
+    </head>
+    <body class="titleBack">
+
+        <!--Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="#">Matthew Kanemy</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--/.Navbar -->
+
+        <!-- Title -->
+        <h1 class="type">
+          <a href="" class="write" length="200" text='Hi Im Matt!, This is my homepage!.'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+
+        <!-- Content that comes up after title disappears -->
+        <div class="crd-group">
+        	<a href="portfolio.html">
+	        	<div class="con-cards">
+	    			<div class="crd portfolio">
+	      			<div class="con-img">
+	        			<img src="images/portfolio.png" alt="">
+	        			<!--<img class="blur" src="NicePng_connection-icon-png_2026385.png" alt="">-->
+	      			</div>
+	      			<div class="con-text">
+	        			<h2>Portfolio</h2>
+	        			<p>Browse through my side projects and qualifications!</p>
+	      			</div>
+	      		</div>
+	      	</a>
+
+	      	<a href="about.html">
+		    	<div class="con-cards">
+		    		<div class="crd about">
+		      		<div class="con-img">
+		        		<img src="images/about.png" alt="">
+		        		<!--<img class="blur" src="NicePng_connection-icon-png_2026385.png" alt="">-->
+		      		</div>
+		      		<div class="con-text">
+		        		<h2>About</h2>
+		        		<p>Learn a little bit about me and my experience!</p>
+		      		</div>
+		    	</div>
+		    </a>
+
+		    <a href="contact.html">
+		    	<div class="con-cards">
+		    		<div class="crd contact">
+		      		<div class="con-img">
+		        		<img src="images/contact.png" alt="">
+		        		<!--<img class="blur" src="NicePng_connection-icon-png_2026385.png" alt="">-->
+		      		</div>
+		      		<div class="con-text">
+		        		<h2>Contact</h2>
+		        		<p>Connect with me on linked in, view my github or send me an email!</p>
+		      		</div>
+		    	</div>
+		    </a>
+	    </div>
+
+
+    <script>
+        //control
+        var text;
+        var length;
+        var loopNum = 0;
+        var txt = '';
+        var el;
+        var back = false;
+        var end = false;
+        var pause;
+
+        //onload do the animation of text
+        window.onload = function() {
+
+            //get the elements to print
+            var elements = document.getElementsByClassName('write');
+            for (var i=0; i < elements.length; i++) {
+                //load the information from the text
+                text = elements[i].getAttribute('text'); //load the text to be printed
+                length = elements[i].getAttribute('length'); //load the time it takes to print
+                el = elements[i];
+            }
+
+            length = parseInt(length, 10) || 2000; // set length
+            write();
+
+            //write the text
+            function write() {
+
+                //set txt equal to current character
+                txt = text[loopNum];
+                //count current character up or down depending on direction of typing
+                if (back) {
+                    loopNum--;
+                }
+                else {
+                    loopNum++;
+                }
+
+                //if end of sentance stop and get rid of cursor
+                if (txt === '.') {
+
+                    end = true;
+                    // put in the css for the cursor
+                    var css = document.createElement("style"); // create css
+                    css.type = "text/css";
+                    css.innerHTML = ".write { border-right: 0em}"; //remove the cursor
+                    document.body.appendChild(css); //add the css styling to the document
+
+
+                }
+
+                if (end === false) {
+
+                    //if first saying is done, delete it
+                    if (txt === ',') {
+
+                        back = true;
+                        length /= 2;
+                        pause = loopNum;
+                        text = text.replace(',', '');
+
+                    }
+                    else {
+
+                        //if going straight print the char
+                        if (back === false) {
+
+                            el.innerHTML += '<span class="wrap">'+txt+'</span>';
+
+                        }
+                        //if going back print the current text-1 char
+                        else if (back === true) {
+
+                            txt = text.substring(0, loopNum-1);
+
+                            el.innerHTML = '<span class="wrap">'+txt+'</span>';
+
+                            //if back at origin, restart with new saying
+                            if (loopNum === 0) {
+
+                                loopNum = pause;
+                                back = false;
+
+                            }
+
+                        }
+
+                    }
+
+
+                }
+
+                //timeout
+                setTimeout(function() {
+                    write();
+                }, length);
+
+            }
+
+        }
+    </script>
+
+        <!-- Bootstrap js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

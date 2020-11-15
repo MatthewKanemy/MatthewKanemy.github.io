@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- BootStrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Style css -->
+	<link rel="stylesheet" href="/css/home.css">
+
+</head>
+
+<body>
+
+	<div class="top">
+
+		<div class="navBar">
+			
+			<img src="/images/logo.png">
+
+			<!--  Navbar menu when browser is bigger -->
+			<li class="nav">
+        <a href="About_Us.html">About Us</a>
+        <a href="Current_Issue.html">Current Issues</a>
+				<a href="Contact_Us.html">Contact Us</a>
+				<!--<a href="FAQ.html">FAQs</a>-->
+			</li>
+
+			<!-- Dropdown menu for smaller browsers -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-secondary dropdown-toggle main-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Home
+			  </button>
+			  <div class="dropdown-menu dropdown-menu-right">
+			    <button onclick="window.location.href='about_us.html'" class="dropdown-item" type="button">About Us</button>
+          <button onclick="window.location.href='current_issue.html'" class="dropdown-item" type="button">Current Issues</button>
+          <button onclick="window.location.href='contact_us.html'" class="dropdown-item" type="button">Contact Us</button>
+			  </div>
+			</div>
+
+		</div>
+
+		<!-- image Carousel -->
+	<div class="first">
+
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		  	<div class="carousel-item active">
+		  		<div class="embed-responsive" style="padding-bottom: 67%;">
+    				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GDUnGr6Ril0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="myIframe"></iframe>
+					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z8oJV_mBY9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="m"></iframe>
+				</div>
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="/images/carousel22.jpg" alt="Change Lives" id="carouselImg">
+		      <div class="carousel-caption d-none d-md-block">
+    			<h2>Change Lives</h2>
+    			<p>You have a part to play. Join us.</p>
+  			  </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="/images/carousel20.jpg" alt="Save the animals">
+		      <div class="carousel-caption d-none d-md-block">
+    			<h2>Save the Animals</h2>
+    			<p>They're essential to our ecosystem. They matter.</p>
+  			  </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="/images/carousel21.jpg" alt="Clean the Ocean">
+		      <div class="carousel-caption d-none d-md-block">
+    			<h2>Clean the Ocean</h2>
+    			<p>Clean water = happy turtles!</p>
+  			  </div>
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+
+	</div>
+
+	<div class="transition">
+
+		<div class="jumbotron">
+		    <h2 class="h1-responsive">Welcome to Donatr</h2>
+		    <p class="lead">We are a free, easy to use web application to match you with to best charities of whatever country you desire!</p>
+		    <hr class="my-2">
+		    <p>With over 200 countries and over 2000 charities your perfect charity is just a few clicks away!
+		    </p>
+		    <div class="card text-center">
+			  <div class="card-body">
+			    <h5 class="card-title">Get Started</h5>
+			    <p class="card-text">Now that you know what our mission is, it is time to help change the world!</p>
+			    <a href="homepage.html" class="btn btn-primary">Begin</a>
+			  </div>
+			  <br>
+			  <div class="card-footer text-muted">
+			    or you can learn more about us and our mission!
+			    <br>
+			    <br>
+			    <a href="About_Us.html" class="btn btn-primary">Learn More</a>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- BootStrap -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 10;
+    background: #00b4d8;
+    color: #00b4d8;
+    font-family: sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    margin-left: 0;
+    width: 100%;
+    text-align: right;
+}
+.container > div {
+    height: 300px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.45s ease-in-out;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    color: white;
+    font-family: sans-serif;
+}
+.container > div:hover{
+    opacity: 0.7s;
+    transform: scale(0.97);
+}
+.Yemen{
+    background: url("/images/yemen.JPG") no-repeat center;
+}
+.DRC{
+    background: url("/images/congo.JPG") no-repeat center;
+}
+.Syria{
+    background: url("/images/syria.JPG") no-repeat center;
+}
+.Nigeria{
+    background: url("/images/nigeria.JPG") no-repeat center;
+}
+.Venezuala{
+    background: url("/images/venezuela.JPG") no-repeat center;
+}
+.Afghanistan{
+    background: url("/images/pic4.JPG") no-repeat center;
+}
+
+.card-title {
+
+    font-family: sans-serif;
+
+    margin-top: 0.5em;
+
+}
+
+.card-text {
+
+    font-family: sans-serif;
+
+
+}
+
+h2 {
+    font-size: 33px;
+    font-weight: bold;
+}
+h3{
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+h6{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p{
+    font-size: 15px;
+    color: white;
+}
+h1{
+    font-size: 37px;
+    text-align: center;
+    color: white;
+}
+
+.card {
+
+    width: 31.5vw;
+
+}
+
